@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muneeba Noor | Web Developer & Digital Marketer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#f4f8ff;--ink:#14213d;--mute:#56627f;--a:#4f6bff;--b:#19c3b1;--c:#ff8a5c;--card:#ffffffcc;--line:#dbe4ff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;margin:0;line-height:1.05}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+.blob{position:fixed;border-radius:50%;filter:blur(80px);opacity:.5;z-index:0;pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:var(--a);top:-120px;right:-100px;opacity:.28}
+.b2{width:380px;height:380px;background:var(--b);bottom:-120px;left:20%;opacity:.3;animation-delay:-6s}
+.b3{width:300px;height:300px;background:var(--c);top:45%;right:10%;opacity:.22;animation-delay:-11s}
+@keyframes drift{to{transform:translate(60px,-50px) scale(1.15)}}
+.layout{position:relative;z-index:1;display:grid;grid-template-columns:340px 1fr;max-width:1280px;margin:0 auto}
+aside{position:sticky;top:0;height:100vh;padding:48px 34px;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.avatar{position:relative;width:132px;height:132px;border-radius:50%;display:grid;place-items:center;font:800 2.6rem "Bricolage Grotesque",sans-serif;color:var(--ink);background:#fff}
+.avatar::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(var(--a),var(--b),var(--c),var(--a));animation:spin 5s linear infinite;z-index:-1;filter:drop-shadow(0 0 16px var(--a))}
+@keyframes spin{to{transform:rotate(360deg)}}
+aside h1{font-size:2.5rem;font-weight:800}
+aside p{margin:0;color:var(--mute)}
+.menu{display:grid;gap:4px;margin-top:6px}
+.menu a{display:flex;align-items:center;gap:12px;padding:9px 14px;border-radius:12px;text-decoration:none;color:var(--mute);font-weight:500;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.menu a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .25s,box-shadow .25s}
+.menu a:hover,.menu a.on{color:var(--ink);background:#fff;transform:translateX(8px);box-shadow:0 6px 24px #4f6bff26}
+.menu a:hover::before,.menu a.on::before{background:var(--b);box-shadow:0 0 12px var(--b)}
+.side-contact{font-size:.92rem;color:var(--mute);display:grid;gap:2px}
+.side-contact a{color:var(--a);text-decoration:none;font-weight:500}
+main{padding:70px 48px 40px 20px;min-width:0}
+section{padding:0 0 110px}
+h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;margin-bottom:30px}
+h2 em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2{font-size:clamp(2.6rem,7vw,5.2rem);margin-bottom:24px}
+.hero .lead{font-size:1.2rem;color:var(--mute);max-width:54ch}
+.pill{display:inline-block;padding:7px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:500;margin-bottom:22px;box-shadow:0 0 20px #19c3b140}
+.pill i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--b);margin-right:8px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px #19c3b100,0 0 14px var(--b);transform:scale(1.2)}}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:14px 28px;border-radius:16px;text-decoration:none;font-weight:500;border:2px solid var(--ink);transition:transform .25s,box-shadow .25s}
+.btn.go{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px #4f6bff55,0 0 24px #19c3b155}
+.s{opacity:0;transition:opacity .8s ease,transform .9s cubic-bezier(.2,.85,.25,1)}
+.l{transform:translateX(-110px)}.r{transform:translateX(110px)}.u{transform:translateY(60px)}
+.s.in{opacity:1;transform:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.stat{padding:20px;border-radius:20px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(10px)}
+.stat b{display:block;font:800 1.5rem "Bricolage Grotesque",sans-serif}
+.stat span{color:var(--mute);font-size:.92rem}
+.about p{color:var(--mute);font-size:1.12rem;max-width:62ch;margin:0 0 16px}
+.rows{overflow:hidden;margin-right:-48px;display:grid;gap:14px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:14px;width:max-content;animation:run 30s linear infinite}
+.track.rev{animation-direction:reverse;animation-duration:38s}
+.rows:hover .track{animation-play-state:paused}
+@keyframes run{to{transform:translateX(-50%)}}
+.chip{white-space:nowrap;padding:14px 26px;border-radius:18px;background:#fff;border:1px solid var(--line);font-weight:500;box-shadow:0 0 22px #4f6bff1f;transition:box-shadow .25s,transform .25s}
+.chip:hover{transform:scale(1.07);box-shadow:0 0 30px var(--a)}
+.chip.w{background:linear-gradient(135deg,#eef1ff,#e6fbf8)}
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.group{padding:22px 24px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.group h3{font-size:1.1rem;margin-bottom:6px}
+.group p{margin:0;color:var(--mute);font-size:.95rem}
+.proj{position:relative;padding:32px;border-radius:28px;background:#fff;margin-bottom:28px;isolation:isolate}
+.proj::before{content:"";position:absolute;inset:-2px;border-radius:30px;background:linear-gradient(120deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;z-index:-1;animation:flow 6s linear infinite;filter:blur(7px);opacity:.55;transition:opacity .3s}
+.proj::after{content:"";position:absolute;inset:0;border-radius:28px;background:#fff;z-index:-1}
+.proj:hover::before{opacity:1}
+@keyframes flow{to{background-position:300% 0}}
+.proj h3{font-size:1.7rem;margin-bottom:10px}
+.proj p{color:var(--mute);margin:0 0 10px;max-width:60ch}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tags span{padding:5px 14px;border-radius:999px;background:#eef1ff;color:var(--a);font-weight:500;font-size:.88rem}
+.edu{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:30px;border-radius:26px;background:var(--card);border:1px solid var(--line)}
+.edu .yr{font:800 1.1rem "Bricolage Grotesque",sans-serif;color:#fff;padding:14px 18px;border-radius:18px;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 0 28px #4f6bff66;height:fit-content}
+.edu h3{font-size:1.4rem;margin-bottom:6px}.edu p{margin:0;color:var(--mute)}
+.contact-box{padding:48px 34px;border-radius:32px;text-align:center;background:linear-gradient(135deg,#e9eeff,#e3fbf7 60%,#fff1ea);border:1px solid var(--line);box-shadow:0 0 60px #4f6bff26}
+.contact-box h2{margin-bottom:12px}
+.contact-box p{color:var(--mute);margin:0 auto;max-width:46ch}
+.contact-box .btns{justify-content:center}
+footer{text-align:center;color:var(--mute);padding:0 0 30px;font-size:.9rem}
+@media (max-width:900px){
+ .layout{grid-template-columns:1fr}
+ aside{position:static;height:auto;padding:36px 6vw 10px;align-items:flex-start}
+ .menu{grid-auto-flow:column;overflow-x:auto;gap:2px;max-width:100%}
+ .menu a{white-space:nowrap}
+ .side-contact{display:none}
+ main{padding:30px 6vw 30px}
+ .rows{margin-right:-6vw}.groups,.stats{grid-template-columns:1fr}
+ .l,.r{transform:translateY(50px)}.edu{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.s{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="layout">
+<aside>
+  <div class="avatar">MN</div>
+  <div><h1>Muneeba Noor</h1><p>Web developer and digital marketer</p></div>
+  <nav class="menu">
+    <a href="#home" class="on">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="side-contact"><span>Multan, Pakistan</span><a href="mailto:muneeba1699@gmail.com">muneeba1699@gmail.com</a></div>
+</aside>
+<main>
+<section id="home" class="hero">
+  <div class="pill s l"><i></i>Open to opportunities</div>
+  <h2 class="s l">I build websites people can <em>find and use.</em></h2>
+  <p class="lead s r">I’m an Information Technology student who makes WordPress sites, writes search-friendly content, and plans social media campaigns for small businesses.</p>
+  <div class="btns s u"><a class="btn go" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+  <div class="stats s u"><div class="stat"><b>2</b><span>Projects built</span></div><div class="stat"><b>6</b><span>Certificates earned</span></div><div class="stat"><b>2</b><span>Languages spoken</span></div></div>
+</section>
+
+<section id="about" class="about">
+  <h2 class="s r">About <em>me</em></h2>
+  <p class="s l">I’m studying Information Technology at Women University Multan, and I’m learning web development, SEO, and digital marketing together.</p>
+  <p class="s r">I like turning an idea into something clear and easy to use. I’m looking for a place where I can add technical, creative, and problem-solving skills while I keep learning.</p>
+</section>
+
+<section id="skills">
+  <h2 class="s l">What I <em>work with</em></h2>
+  <div class="rows s u">
+    <div class="track" id="t1"></div>
+    <div class="track rev" id="t2"></div>
+  </div>
+  <div class="groups">
+    <div class="group s l"><h3>Web</h3><p>HTML, CSS, JavaScript, Python, WordPress, Elementor, responsive design, basic UI/UX.</p></div>
+    <div class="group s r"><h3>SEO</h3><p>Keyword research, on-page SEO, meta descriptions, SEO-friendly content.</p></div>
+    <div class="group s l"><h3>Marketing</h3><p>Social media marketing, content strategy, hashtag research, caption writing.</p></div>
+    <div class="group s r"><h3>Ways I work</h3><p>Creative thinking, problem-solving, time management, adaptability, quick learning, communication.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="s r">Projects</h2>
+  <div class="proj s l"><h3>AI Tools Directory Website</h3><p>A website concept that helps small businesses find AI tools for digital marketing, content creation, graphic design, and productivity.</p><p>I planned simple navigation, sorted the tools into clear categories, and built the content and structure to be SEO-friendly and accessible.</p><div class="tags"><span>Website concept</span><span>SEO</span><span>UX planning</span></div></div>
+  <div class="proj s r"><h3>Digital Marketing Campaign</h3><p>Social media content and strategy ideas to raise brand awareness, audience engagement, and online visibility.</p><p>I applied content planning, caption writing, and hashtag research to the promotion plan.</p><div class="tags"><span>Content planning</span><span>Captions</span><span>Hashtags</span></div></div>
+</section>
+
+<section id="education">
+  <h2 class="s l">Education and <em>certificates</em></h2>
+  <div class="edu s r"><div class="yr">2024 to now</div><div><h3>BS Information Technology</h3><p>Women University Multan</p><p style="margin-top:8px">Web Development, Programming Fundamentals (Python), Database Management Systems, Digital Marketing and SEO, Software Engineering.</p></div></div>
+  <div class="rows s u" style="margin-top:28px"><div class="track" id="t3"></div></div>
+</section>
+
+<section id="contact">
+  <div class="contact-box s u"><h2>Let’s <em>work together</em></h2><p>Have a website or marketing idea in mind? Send me a message and I’ll reply soon.</p><div class="btns"><a class="btn go" href="mailto:muneeba1699@gmail.com">Email me</a><a class="btn" href="tel:+923706112923">0370 6112923</a></div></div>
+</section>
+<footer>© 2026 Muneeba Noor · Gulgasht Colony, Multan</footer>
+</main>
+</div>
+<script>
+(function(){
+  function fill(id,arr,cls){var h="";for(var k=0;k<2;k++)arr.forEach(function(x){h+='<div class="chip '+(cls||"")+'">'+x+'</div>'});document.getElementById(id).innerHTML=h}
+  fill("t1",["HTML","CSS","JavaScript","Python","WordPress","Elementor","Responsive design","Basic UI/UX"]);
+  fill("t2",["Keyword research","On-page SEO","Meta descriptions","Social media marketing","Content strategy","Hashtag research","Caption writing"],"w");
+  fill("t3",["Digital Marketing, Google/Coursera","AI for Digital Marketing, The Net Rider Institute","Cybersecurity, Google/Coursera","Odoo Workshop","Generative AI Conference 2025","AI for All Seminar 2026","Abstract Publication (pending)"]);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".s").forEach(function(s){io.observe(s)});
+  var links=document.querySelectorAll(".menu a"),secs=[].slice.call(document.querySelectorAll("main section"));
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
+  secs.forEach(function(s){so.observe(s)});
+})();
+</script>
+</body>
+</html>
